@@ -34,7 +34,7 @@ jobs:
         git pull --rebase origin main
         git add logs/
         git diff --staged --quiet || git commit -m "Daily monitor: $(date +'%Y-%m-%d') - model health check"
-        git push
+        git push --force
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
