@@ -2,27 +2,29 @@ name: Daily Model Monitor
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # runs every day at 9am
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:
   daily-monitor:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write
+
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v4
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-    
+
     - name: Install dependencies
       run: pip install lightgbm scikit-learn pandas numpy joblib
-    
+
     - name: Run daily monitor
       run: python daily_monitor.py
-    
+
     - name: Commit activity log
       run: |
         git config --global user.email "action@github.com"
@@ -30,3 +32,12 @@ jobs:
         git add logs/
         git diff --staged --quiet || git commit -m "Daily monitor: $(date +'%Y-%m-%d') - model health check"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Save with **Ctrl+S** then in terminal:
+```
+git add .
+git commit -m "Fix workflow permissions and update actions versions"
+git push origin main
