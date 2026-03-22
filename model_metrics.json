@@ -1,0 +1,10 @@
+{
+  "roc_auc": 0.9663,
+  "pr_auc": 0.6678,
+  "f1_fraud": 0.6627,
+  "precision_fraud": 0.7887,
+  "recall_fraud": 0.5714,
+  "best_threshold": 0.71,
+  "train_samples": 454908,
+  "test_samples": 56962
+}
