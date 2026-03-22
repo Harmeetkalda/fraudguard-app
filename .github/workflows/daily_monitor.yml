@@ -38,9 +38,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-
-Save with **Ctrl+S** then in terminal:
-```
-git add .
-git commit -m "Fix git pull before push in workflow"
-git push origin main
