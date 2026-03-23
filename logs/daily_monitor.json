@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2026-03-23",
+    "transactions_scored": 816,
+    "flagged_as_fraud": 2,
+    "fraud_rate_pct": 0.245,
+    "avg_fraud_prob": 0.308,
+    "max_fraud_prob": 0.7502,
+    "model_status": "healthy"
+  }
+]
