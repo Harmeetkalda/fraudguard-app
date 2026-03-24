@@ -30,8 +30,8 @@ jobs:
 
     - name: Commit activity log
       run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "FraudGuard Monitor"
+        git config --global user.email "harmeetkalra7434@gmail.com"
+        git config --global user.name "Harmeet Kalda"
         git fetch origin main
         git merge origin/main --no-edit
         git add logs/
