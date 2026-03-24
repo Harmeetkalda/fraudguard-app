@@ -130,7 +130,7 @@ def shap_chart(df_enc):
 # ── Sidebar ────────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## 🛡️ FraudGuard")
-    st.markdown("*AI-powered transaction fraud detection*")
+    st.markdown("**Real-time fraud detection · v1.1**")
     st.divider()
 
     page = st.radio("Navigation", ["🔍 Single Transaction", "📂 Batch Prediction", "📊 Model Performance"])
