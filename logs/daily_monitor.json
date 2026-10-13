@@ -1816,5 +1816,14 @@
     "avg_fraud_prob": 0.3059,
     "max_fraud_prob": 0.7213,
     "model_status": "healthy"
+  },
+  {
+    "date": "2026-10-13",
+    "transactions_scored": 949,
+    "flagged_as_fraud": 5,
+    "fraud_rate_pct": 0.527,
+    "avg_fraud_prob": 0.3146,
+    "max_fraud_prob": 0.7497,
+    "model_status": "healthy"
   }
 ]
